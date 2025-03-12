@@ -16,6 +16,8 @@ export class DemoAudioDeviceComponent {
   private initialX = 0;
   private initialY = 0;
 
+  InOut = InOut;
+
   constructor(private el: ElementRef) {}
 
   @HostListener('mousedown', ['$event'])
@@ -40,8 +42,20 @@ export class DemoAudioDeviceComponent {
     }
   }
 
-	getInOut() {
-		return InOut;
-	}
+  // Method to generate array based on outputs count
+  getOutputsArray(): number[] {
+    if (!this.device || typeof this.device.outputs !== 'number') {
+      return [];
+    }
+    return Array(this.device.outputs).fill(0).map((_, index) => index);
+  }
+
+  // Method to generate array based on outputs count
+  getInputsArray(): number[] {
+    if (!this.device || typeof this.device.inputs !== 'number') {
+      return [];
+    }
+    return Array(this.device.inputs).fill(0).map((_, index) => index);
+  }
 
 }

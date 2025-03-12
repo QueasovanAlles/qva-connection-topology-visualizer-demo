@@ -10,8 +10,8 @@
     <div class="inputs">
       <span class="port-label">Inputs</span>
       <app-audio-jack-hole 
-        *ngFor="let _ of [].constructor(device.inputs); let i = index" 
-        [inout]="getInOut().INPUT">
+        *ngFor="let i of getInputsArray()" 
+        [inout]="InOut.INPUT">
       </app-audio-jack-hole>
     </div>
 
@@ -19,8 +19,8 @@
     <div class="outputs">
       <span class="port-label">Outputs</span>
       <app-audio-jack-hole 
-        *ngFor="let _ of [].constructor(device.outputs); let i = index" 
-        [inout]="getInOut().OUTPUT">
+        *ngFor="let i of getOutputsArray()" 
+        [inout]="InOut.OUTPUT">
       </app-audio-jack-hole>
     </div>
   </div>

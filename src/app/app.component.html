@@ -1,8 +1,13 @@
 <div class="app-container">
+
 	<div class="header">
+
 		<h1>{{title}}</h1>
+
 	</div>
+
     <div class="demo-container">
+
 		<app-demo-audio-device
 			*ngFor="let device of audioDevices"
 			[device]="device">
@@ -22,5 +27,7 @@
 			*ngIf="cablingConnection"
 			[connection]="cablingConnection">
 		</app-cable-cursor>
+
     </div>
+
 </div>

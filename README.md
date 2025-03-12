@@ -1,27 +1,42 @@
-# QvaConnectionTopologyVisualizerDemo
+# qva-connection-topology-visualizer
+Dynamic visualization module for audio routing and connection management. Create interactive patching interfaces with draggable devices, connection points, and animated cables.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
+![Image description](/docs/qva-connection-topology-visualizer.png)
 
-## Development server
+## Features
+-Drag-and-drop vritual audio cables into virtual devices
+-Visualisation with animated cable connections
+-Input/Output jack management
+-Available for implementing according to own needs
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Install via npm
 
-## Build
+npm install qva-connection-topology-visualizer
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```ts
+// In your module
+import { QvaConnectionTopologyVisualizerModule } from 'qva-connection-topology-visualizer';
 
-## Running unit tests
+@NgModule({
+  imports: [
+    QvaConnectionTopologyVisualizerModule
+  ]
+})
+export class AppModule { }
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+// In your component template
+<qva-audio-jack-rack [config]="rackConfig">
+  <qva-audio-jack-hole type="input" label="Audio In"></qva-audio-jack-hole>
+  <qva-audio-jack-hole type="output" label="Audio Out"></qva-audio-jack-hole>
+</qva-audio-jack-rack>
+```
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Usage
+This just demonstrates usage of the 
 
-## Further help
+[Watch Demo on YouTube](https://www.youtube.com/watch?v=your-video-id)  -- TODO
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

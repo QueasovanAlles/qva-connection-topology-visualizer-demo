@@ -1,0 +1,27 @@
+<div class="device-container" 
+     [style.width.vw]="device.width" 
+     [style.height.vh]="device.height">
+  <!-- Title at the top -->
+  <div class="device-title">{{ device.name }}</div>
+
+  <!-- Bottom row for inputs and outputs -->
+  <div class="ports-container">
+    <!-- Inputs (left side) -->
+    <div class="inputs">
+      <span class="port-label">Inputs</span>
+      <app-audio-jack-hole 
+        *ngFor="let _ of [].constructor(device.inputs); let i = index" 
+        [inout]="getInOut().INPUT">
+      </app-audio-jack-hole>
+    </div>
+
+    <!-- Outputs (right side) -->
+    <div class="outputs">
+      <span class="port-label">Outputs</span>
+      <app-audio-jack-hole 
+        *ngFor="let _ of [].constructor(device.outputs); let i = index" 
+        [inout]="getInOut().OUTPUT">
+      </app-audio-jack-hole>
+    </div>
+  </div>
+</div>

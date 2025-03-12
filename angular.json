@@ -63,6 +63,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+		  "options": {
+			"browserTarget": "qva-connection-topology-visualizer-demo:build"
+		  },
           "configurations": {
             "production": {
               "browserTarget": "qva-connection-topology-visualizer-demo:build:production"
@@ -100,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "1ae2da3e-be4a-44be-81d0-39c64fb997c9"
   }
 }

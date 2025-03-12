@@ -3,7 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "outDir": "./dist",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
@@ -31,3 +31,7 @@
     "strictTemplates": true
   }
 }
+/*,
+    "paths": {
+      "qva-connection-topology-visualizer": ["src/qva-connection-topology-visualizer/src"]
+    }*/

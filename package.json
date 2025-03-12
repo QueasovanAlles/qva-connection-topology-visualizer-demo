@@ -21,7 +21,6 @@
     "i": "^0.3.7",
     "npm": "^11.2.0",
     "qva-connection-topology-visualizer": "^1.0.21",
-    "qva-fresh-start": "^0.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
